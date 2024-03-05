@@ -426,23 +426,15 @@ class MyTrainingArguments(TrainingArguments):
 
 
 logger = logging.getLogger(__name__)
-
+log_file = "log.txt"
 
 def main():
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, MyTrainingArguments)
     )
-    if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
-        # If we pass only one argument to the script and it's the path to a json file,
-        # let's parse it to get our arguments.
-        model_args, data_args, training_args = parser.parse_json_file(
-            json_file=os.path.abspath(sys.argv[1])
-        )
-    else:
-        model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    model_args, data_args, training_args = parser.parse_args_into_dataclasses()
     if training_args.flash_attn:
         from flash_attn_patch import replace_llama_attn_with_flash_attn
-
         replace_llama_attn_with_flash_attn()
 
     # Sending telemetry. Tracking the example usage helps us better allocate resources to maintain them. The
@@ -451,10 +443,11 @@ def main():
 
     # Setup logging
     logging.basicConfig(
+        filename=log_file,
+        filemode='a',
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO,  # if training_args.local_rank in [-1, 0] else logging.WARN,
-        handlers=[logging.StreamHandler(sys.stdout)],
     )
 
     if training_args.should_log:
@@ -528,7 +521,7 @@ def main():
         "use_auth_token": True if model_args.use_auth_token else None,
     }
     if model_args.tokenizer_name:
-        tokenizer = AutoTokenizer.from_pretrained(
+        tokenizier = AutoTokenizer.from_pretrained(
             model_args.tokenizer_name, **tokenizer_kwargs
         )
     elif model_args.tokenizer_name_or_path:
@@ -545,19 +538,21 @@ def main():
     # Preprocessing the datasets.
     # First we tokenize all the texts.
     # since this will be pickled to avoid _LazyModule error in Hasher force logger loading before tokenize_function
-    tok_logger = transformers.utils.logging.get_logger(
-        "transformers.tokenization_utils_base"
-    )
+    # tok_logger = transformers.utils.logging.get_logger(
+    #     "transformers.tokenization_utils_base"
+    # )
 
     def tokenize_function(examples):
-        with CaptureLogger(tok_logger) as cl:
-            output = tokenizer(examples["text"])
-        # clm input could be much much longer than block_size
-        if "Token indices sequence length is longer than the" in cl.out:
-            tok_logger.warning(
-                "^^^^^^^^^^^^^^^^ Please ignore the warning above - this long input will be chunked into smaller bits"
-                " before being passed to the model."
-            )
+        # with CaptureLogger(tok_logger) as cl:
+        #     output = tokenizer(examples["text"])
+        # # clm input could be much much longer than block_size
+        # if "Token indices sequence length is longer than the" in cl.out:
+        #     tok_logger.warning(
+        #         "^^^^^^^^^^^^^^^^ Please ignore the warning above - this long input will be chunked into smaller bits"
+        #         " before being passed to the model."
+        #     )
+        
+        output = tokenizer(examples["text"])
         return output
 
     if data_args.block_size is None:

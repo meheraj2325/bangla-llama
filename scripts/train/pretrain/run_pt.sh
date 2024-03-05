@@ -6,25 +6,37 @@ lora_trainable = "q_proj,v_proj,k_proj,o_proj,gate_proj,down_proj,up_proj"
 modules_to_save = "embed_tokens,lm_head"
 lora_dropout = 0.05
 
-pretrained_model = "/path/to/pretrained/model"
-tamil_tokenizer_path = "/path/to/tokenizer"
-dataset_dir = "/path/to/dataset"
-data_cache = "/path/to/cache_dir"
-output_dir = "/path/to/output_dir"
-deepspeed_config_file = "ds_zero2_no_offload.json"
+seed = 123
+block_size = 512
+torch_dtype = "float16"
+batch_size = 64
+epochs = 1
+validation_split_percentage = 0.05
+
+use_auth_token = True
+flash_attn = True
+
+pretrained_model = "meta-llama/Llama-2-7b-hf"
+tamil_tokenizer_path = "meta-llama/Llama-2-7b-hf"
+dataset_dir = "../../../data/raw_data"
+data_cache = "../../../data/processed_data"
+output_dir = "../../../output"
+deepspeed_config_file = "../../../ds_zero2_no_offload.json"
 
 torchrun --nnodes 1 --nproc_per_node 1 run_clm_pt_with_peft.py \
     --deepspeed ${deepspeed_config_file} \
     --model_name_or_path ${pretrained_model} \
     --tokenizer_name_or_path ${tamil_tokenizer_path} \
-    --dataset_dir ${dataset_dir} \
+    --use_auth_token ${use_auth_token} \
+    --dataset_dir ${dataset_dir} \ 
     --data_cache_dir ${data_cache} \
-    --validation_split_percentage 0.1 \
-    --per_device_train_batch_size 64 \
+    --validation_split_percentage ${validation_split_percentage} \
+    --per_device_train_batch_size ${batch_size} \
     --do_train \
-    --seed $RANDOM \
+    --do_eval \
+    --seed ${seed} \
     --fp16 \
-    --num_train_epochs 1 \
+    --num_train_epochs ${epochs} \
     --lr_scheduler_type cosine \
     --learning_rate ${lr} \
     --warmup_ratio 0.05 \
@@ -36,7 +48,7 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_pt_with_peft.py \
     --save_steps 50 \
     --gradient_accumulation_steps 2 \
     --preprocessing_num_workers 8 \
-    --block_size 512 \
+    --block_size ${block_size} \
     --output_dir ${output_dir} \
     --overwrite_output_dir \
     --ddp_timeout 30000 \
@@ -46,9 +58,9 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_pt_with_peft.py \
     --trainable ${lora_trainable} \
     --lora_dropout ${lora_dropout} \
     --modules_to_save ${modules_to_save} \
-    --torch_dtype float16 \
+    --torch_dtype ${torch_dtype} \
     --gradient_checkpointing \
     --ddp_find_unused_parameters False \
-    --flash_attn True \
+    --flash_attn ${flash_attn} \
     # --load_in_kbits 16 \
     # --resume_from_checkpoint ${output_dir}/checkpoint-300
