@@ -19,12 +19,12 @@ class SentencePieceEncoder:
         )
         parser.add_argument(
             "--model-path",
-            required=True,
+            default=self.model_path,
             help="Path to the trained SentencePiece model file.",
         )
         parser.add_argument(
             "--input-text",
-            required=True,
+            default="ঢাকা বাংলাদেশের রাজধানী শহর",
             help="Text to be encoded.",
         )
 
@@ -37,6 +37,6 @@ class SentencePieceEncoder:
 
 if __name__ == "__main__":
     sp_encoder = SentencePieceEncoder(
-        model_path="tamil_sp.model"
+        model_path="/home/ubuntu/ccds/bangla-llama/models/bangla_sp.model"
     )  # Provide the path to your trained model here
     sp_encoder.run()

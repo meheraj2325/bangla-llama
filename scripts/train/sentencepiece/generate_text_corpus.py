@@ -22,7 +22,7 @@ class CorpusCreator:
         hf_dataset,
         text_col,
         dataset_split="train",
-        output_file_name="tamil_sentence_corpus.txt",
+        output_file_name="bangla_sentence_corpus.txt",
     ):
         try:
             dataset = load_dataset(hf_dataset, split=dataset_split)
@@ -63,8 +63,8 @@ class CorpusCreator:
         )
         parser.add_argument(
             "--output-file-name",
-            default="tamil_sentence_corpus.txt",
-            help="Name of the output corpus file (default: 'tamil_sentence_corpus.txt').",
+            default="bangla_sentence_corpus.txt",
+            help="Name of the output corpus file (default: 'bangla_sentence_corpus.txt').",
         )
 
         args = parser.parse_args()

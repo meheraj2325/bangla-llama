@@ -105,12 +105,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output-csv",
         help="Path to save the output CSV file with scores.",
-        default="tamil_eval_scores.csv",
+        default="bangla_eval_scores.csv",
     )
     parser.add_argument(
         "--model-output-field",
         help="Field name of the model output in the CSV file.",
-        default="tamil-llama",
+        default="bangla-llama",
     )
     parser.add_argument(
         "--max-retries",

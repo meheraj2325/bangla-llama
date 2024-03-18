@@ -17,7 +17,7 @@ use_auth_token=True
 flash_attn=True
 
 pretrained_model="meta-llama/Llama-2-7b-hf"
-tamil_tokenizer_path="meta-llama/Llama-2-7b-hf"
+bangla_tokenizer_path="meta-llama/Llama-2-7b-hf"
 dataset_dir="../../../data/raw_data"
 data_cache="../../../data/processed_data"
 output_dir="../../../output"
@@ -26,7 +26,7 @@ deepspeed_config_file="../../../ds_zero2_no_offload.json"
 torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --deepspeed ${deepspeed_config_file} \
     --model_name_or_path ${pretrained_model} \
-    --tokenizer_name_or_path ${tamil_tokenizer_path} \
+    --tokenizer_name_or_path ${bangla_tokenizer_path} \
     --use_auth_token ${use_auth_token} \
     --dataset_dir ${dataset_dir} \
     --data_cache_dir ${data_cache} \

@@ -41,7 +41,7 @@ PROMPT_TEMPLATES = {
     "ta": ChatPromptTemplate.from_messages(
         [
             SystemMessagePromptTemplate.from_template(
-                "You are an assistant fluent in Tamil. Respond clearly, truthfully, and concisely to user instructions in Tamil."
+                "You are an assistant fluent in bangla. Respond clearly, truthfully, and concisely to user instructions in bangla."
             ),
             HumanMessagePromptTemplate.from_template("{instruction}"),
         ]
@@ -84,13 +84,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--instructions_csv_path",
         type=str,
-        default="./preds/tamil_alpaca_eval.csv",
+        default="./preds/bangla_alpaca_eval.csv",
         help="Path to the CSV file containing the instructions",
     )
     parser.add_argument(
         "--save_path",
         type=str,
-        default="./preds/tamil_eval_preds_gpt.csv",
+        default="./preds/bangla_eval_preds_gpt.csv",
         help="Path to save the predictions CSV file",
     )
     parser.add_argument("--verbose", action="store_true", help="Print verbose output")

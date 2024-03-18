@@ -6,24 +6,28 @@ import sentencepiece as spm
 
 class SentencePieceTrainer:
     def __init__(self):
-        self.corpus_dir = "./corpus"
+        self.corpus_dir = "./data/raw_data/"
         self.output_dir = "./models"
-        self.model_prefix = "tamil_sp"
+        self.model_prefix = "bangla_sentencepiece"
         self.vocab_size = 20000
         self.character_coverage = 1.0
         self.model_type = "unigram"
 
-    def train_sentencepiece_model(self, input_file):
+    def train_sentencepiece_model(self):
         output_model_path = os.path.join(self.output_dir, f"{self.model_prefix}.model")
 
+        input_files = [os.path.join(self.corpus_dir, f) for f in os.listdir(self.corpus_dir) if os.path.isfile(os.path.join(self.corpus_dir, f))]
+
         spm.SentencePieceTrainer.train(
-            input=input_file,
+            input=input_files,
             model_prefix=self.model_prefix,
             vocab_size=self.vocab_size,
             character_coverage=self.character_coverage,
             model_type=self.model_type,
+            input_sentence_size=40000000,
+            shuffle_input_sentence=True,
+            train_extremely_large_corpus=True
         )
-
         os.rename(
             f"{self.model_prefix}.vocab",
             os.path.join(self.output_dir, f"{self.model_prefix}.vocab"),
@@ -37,11 +41,6 @@ class SentencePieceTrainer:
 
     def run(self):
         parser = argparse.ArgumentParser(description="Train a SentencePiece model.")
-        parser.add_argument(
-            "--input-file",
-            required=True,
-            help="Path to the input text corpus file.",
-        )
         parser.add_argument(
             "--output-dir",
             default=self.output_dir,
@@ -80,7 +79,7 @@ class SentencePieceTrainer:
 
         os.makedirs(self.output_dir, exist_ok=True)
 
-        self.train_sentencepiece_model(args.input_file)
+        self.train_sentencepiece_model()
 
 
 if __name__ == "__main__":

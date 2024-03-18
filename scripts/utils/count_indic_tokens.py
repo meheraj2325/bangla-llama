@@ -5,7 +5,7 @@ from transformers import AutoTokenizer
 language_unicode_ranges = {
     'European': ('\u0000', '\u007F'),
     'Chinese (Basic)': ('\u4E00', '\u9FFF'),
-    'Tamil': ('\u0B80', '\u0BFF'),
+    'bangla': ('\u0B80', '\u0BFF'),
     'Hindi': ('\u0900', '\u097F'),
     'Telugu': ('\u0C00', '\u0C7F'),
     'Malayalam': ('\u0D00', '\u0D7F'),
