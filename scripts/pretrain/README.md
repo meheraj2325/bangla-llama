@@ -18,7 +18,7 @@ Before proceeding, ensure you have the following prerequisites:
 
 ## Guidelines for Llama 2 Pretraining
 
-If you plan to use these scripts for Llama 2 pretraining in your own languages or specifically for Tamil, follow these additional steps:
+If you plan to use these scripts for Llama 2 pretraining in your own languages or specifically for bangla, follow these additional steps:
 
 1. **Delete Safetensors Binaries**: The original Llama model from Hugging Face comes with *safetensors* related binaries. It is crucial to delete these binaries. If not removed, the pretraining script defaults to loading safetensors, which can interfere with saving the modified embedding layer during checkpointing.
 

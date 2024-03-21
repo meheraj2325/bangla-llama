@@ -18,15 +18,15 @@ from transformers import (
 from trl import SFTTrainer
 
 # The model that you want to train from the Hugging Face hub
-model_name = "abhinand/tamil-llama-7b-base-v0.1"
+model_name = "abhinand/bangla-llama-7b-base-v0.1"
 
 # The instruction dataset to use
-dataset_name = "abhinand/tamil-alpaca-orca"
+dataset_name = "abhinand/bangla-alpaca-orca"
 
 instruction_column = "text"
 
 # Fine-tuned model name
-new_model = "abhinand/tamil-llama-7b-instruct-v0.1"
+new_model = "abhinand/bangla-llama-7b-instruct-v0.1"
 
 use_flash_attention_2 = False
 

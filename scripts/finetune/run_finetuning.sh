@@ -5,8 +5,8 @@ echo "=== END TRAINING SCRIPT ==="
 sleep 30
 echo "=== START MAKING SHARDS ==="
 python make_shards.py \
-    --model_name ./abhinand/tamil-llama-7b-instruct-v0.1 \
-    --save_model_name abhinand/tamil-llama-7b-instruct-v0.1-sharded \
+    --model_name ./abhinand/bangla-llama-7b-instruct-v0.1 \
+    --save_model_name abhinand/bangla-llama-7b-instruct-v0.1-sharded \
     --max_shard_size 2GB \
     --push_to_hub \
     --push_mode_private

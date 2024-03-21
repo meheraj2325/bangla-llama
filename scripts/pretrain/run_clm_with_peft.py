@@ -419,7 +419,7 @@ class MyTrainingArguments(TrainingArguments):
     modules_to_save: Optional[str] = field(default=None)
     debug_mode: Optional[bool] = field(default=False)
     peft_path: Optional[str] = field(default=None)
-    flash_attn: Optional[bool] = field(default=False)
+    use_flash_attention_2: Optional[bool] = field(default=False)
     double_quant: Optional[bool] = field(default=True)
     quant_type: Optional[str] = field(default="nf4")
     load_in_kbits: Optional[int] = field(default=16)
@@ -428,14 +428,12 @@ class MyTrainingArguments(TrainingArguments):
 logger = logging.getLogger(__name__)
 log_file = "log.txt"
 
+
 def main():
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, MyTrainingArguments)
     )
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-    if training_args.flash_attn:
-        from flash_attn_patch import replace_llama_attn_with_flash_attn
-        replace_llama_attn_with_flash_attn()
 
     # Sending telemetry. Tracking the example usage helps us better allocate resources to maintain them. The
     # information sent is the one passed as arguments along with your Python/PyTorch versions.
@@ -444,7 +442,7 @@ def main():
     # Setup logging
     logging.basicConfig(
         filename=log_file,
-        filemode='a',
+        filemode="a",
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO,  # if training_args.local_rank in [-1, 0] else logging.WARN,
@@ -462,7 +460,7 @@ def main():
     transformers.utils.logging.enable_explicit_format()
     # transformers.tokenization_utils.logging.set_verbosity_warning()
 
-    if training_args.flash_attn:
+    if training_args.use_flash_attention_2:
         logger.info("Using Flash Attention!")
 
     # Log on each process the small summary:
@@ -521,7 +519,7 @@ def main():
         "use_auth_token": True if model_args.use_auth_token else None,
     }
     if model_args.tokenizer_name:
-        tokenizier = AutoTokenizer.from_pretrained(
+        tokenizer = AutoTokenizer.from_pretrained(
             model_args.tokenizer_name, **tokenizer_kwargs
         )
     elif model_args.tokenizer_name_or_path:
@@ -551,7 +549,7 @@ def main():
         #         "^^^^^^^^^^^^^^^^ Please ignore the warning above - this long input will be chunked into smaller bits"
         #         " before being passed to the model."
         #     )
-        
+
         output = tokenizer(examples["text"])
         return output
 
@@ -723,6 +721,7 @@ def main():
             load_in_4bit=load_in_4bit,
             load_in_8bit=load_in_8bit,
             quantization_config=quantization_config,
+            use_flash_attention_2=training_args.use_flash_attention_2,
         )
     else:
         model = AutoModelForCausalLM.from_config(config)
@@ -812,12 +811,16 @@ def main():
         eval_dataset=eval_dataset if training_args.do_eval else None,
         tokenizer=tokenizer,
         data_collator=fault_tolerance_data_collator,
-        compute_metrics=compute_metrics
-        if training_args.do_eval and not is_torch_tpu_available()
-        else None,
-        preprocess_logits_for_metrics=preprocess_logits_for_metrics
-        if training_args.do_eval and not is_torch_tpu_available()
-        else None,
+        compute_metrics=(
+            compute_metrics
+            if training_args.do_eval and not is_torch_tpu_available()
+            else None
+        ),
+        preprocess_logits_for_metrics=(
+            preprocess_logits_for_metrics
+            if training_args.do_eval and not is_torch_tpu_available()
+            else None
+        ),
     )
     trainer.add_callback(SavePeftModelCallback)
     # Training
@@ -850,7 +853,7 @@ def main():
 
         max_eval_samples = (
             data_args.max_eval_samples
-            if data_args.max_eval_samples is not None 
+            if data_args.max_eval_samples is not None
             else len(eval_dataset)
         )
         metrics["eval_samples"] = min(max_eval_samples, len(eval_dataset))
