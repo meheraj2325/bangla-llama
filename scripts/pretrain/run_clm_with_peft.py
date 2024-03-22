@@ -24,6 +24,7 @@ https://huggingface.co/models?filter=text-generation
 import logging
 import math
 import os
+import wandb
 import sys
 from dataclasses import dataclass, field
 from itertools import chain
@@ -63,6 +64,16 @@ from transformers.testing_utils import CaptureLogger
 from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR, get_last_checkpoint
 from transformers.utils import send_example_telemetry
 from transformers.utils.versions import require_version
+
+
+# set the wandb project where this run will be logged
+os.environ["WANDB_PROJECT"]="bangla_llama_pretraining"
+
+# save your trained model checkpoint to wandb
+os.environ["WANDB_LOG_MODEL"]="end"
+
+# turn off watch to log faster
+os.environ["WANDB_WATCH"]="false"
 
 
 class SavePeftModelCallback(transformers.TrainerCallback):
@@ -423,6 +434,10 @@ class MyTrainingArguments(TrainingArguments):
     double_quant: Optional[bool] = field(default=True)
     quant_type: Optional[str] = field(default="nf4")
     load_in_kbits: Optional[int] = field(default=16)
+
+    #wandb spefic arguments
+    report_to: Optional[str] = field(default="wandb")  # enable logging to W&B
+    run_name: Optional[str] = field(default="test_run")  # name of the W&B run (optional)
 
 
 logger = logging.getLogger(__name__)
@@ -865,6 +880,8 @@ def main():
 
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
+
+    wandb.finish()
 
 
 if __name__ == "__main__":
