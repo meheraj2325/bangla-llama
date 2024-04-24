@@ -66,6 +66,8 @@ from transformers.utils import send_example_telemetry
 from transformers.utils.versions import require_version
 
 
+os.environ["WANDB_ENTITY"]="ccds-bangla-nlp"
+
 # set the wandb project where this run will be logged
 os.environ["WANDB_PROJECT"]="bangla_llama_pretraining"
 
@@ -730,13 +732,14 @@ def main():
             cache_dir=model_args.cache_dir,
             revision=model_args.model_revision,
             use_auth_token=True if model_args.use_auth_token else None,
-            torch_dtype=torch_dtype,
+            # torch_dtype=torch_dtype,
             low_cpu_mem_usage=True,
             device_map=device_map,
             load_in_4bit=load_in_4bit,
             load_in_8bit=load_in_8bit,
             quantization_config=quantization_config,
             use_flash_attention_2=training_args.use_flash_attention_2,
+            use_safetensors=False
         )
     else:
         model = AutoModelForCausalLM.from_config(config)
@@ -756,6 +759,8 @@ def main():
     if model_vocab_size != tokenizer_vocab_size:
         logger.info(f"Resize model vocab size to {tokenizer_vocab_size}")
         model.resize_token_embeddings(len(tokenizer))
+
+    # print(model)
 
     if training_args.peft_path is not None:
         logger.info("Peft from pre-trained model")
@@ -783,6 +788,8 @@ def main():
             modules_to_save=modules_to_save,
         )
         model = get_peft_model(model, peft_config)
+
+    print(model)
     if training_args.gradient_checkpointing and (
         not model.modules_to_save or "embed_tokens" not in model.modules_to_save
     ):

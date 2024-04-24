@@ -8,29 +8,28 @@ lora_dropout=0.05
 
 seed=123
 block_size=512
-torch_dtype="float16"
+torch_dtype="bfloat16"
 batch_size=64
 epochs=1
-gradient_accumulation_steps=4
-validation_split_percentage=0.0001
+gradient_accumulation_steps=2
+validation_split_percentage=0.001
 
 use_auth_token=True
 use_flash_attention_2=True
 
 pretrained_model="meta-llama/Llama-2-7b-hf"
-bangla_tokenizer_path="../../../tokenizer"
-dataset_dir="../../../data/raw_data"
-data_cache="../../../data/processed_data"
-model_cache="../../../models"
-output_dir="../../../output"
-deepspeed_config_file="../../../ds_zero2_no_offload.json"
+bangla_tokenizer_path="../../tokenizer"
+dataset_dir="../../data/raw_pretrain_data"
+data_cache="../../data/processed_pretrain_data"
+model_cache="../../models"
+output_dir="../../output"
+deepspeed_config_file="../../ds_zero2_no_offload.json"
 
 # Weights&Biases specific
 log_report_to="wandb"
-wandb_run_name="test_run"
+wandb_run_name="lora_pretraining"
 
 torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
-    --deepspeed ${deepspeed_config_file} \
     --model_name_or_path ${pretrained_model} \
     --tokenizer_name_or_path ${bangla_tokenizer_path} \
     --use_auth_token ${use_auth_token} \
@@ -43,7 +42,7 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --do_train \
     --do_eval \
     --seed ${seed} \
-    --fp16 \
+    --bf16 \
     --num_train_epochs ${epochs} \
     --lr_scheduler_type cosine \
     --learning_rate ${lr} \
@@ -53,9 +52,9 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --logging_steps 10 \
     --save_strategy steps \
     --save_total_limit 2 \
-    --save_steps 400 \
+    --save_steps 100 \
     --evaluation_strategy steps \
-    --eval_steps 200 \
+    --eval_steps 100 \
     --metric_for_best_model 'eval_loss' \
     --load_best_model_at_end True \
     --gradient_accumulation_steps ${gradient_accumulation_steps} \

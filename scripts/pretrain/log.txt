@@ -1,0 +1,339 @@
+03/30/2024 20:04:34 - INFO - __main__ - Using Flash Attention!
+03/30/2024 20:04:34 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+03/30/2024 20:04:35 - INFO - datasets.builder - Using custom data configuration default-942c3c1054f5c3cb
+03/30/2024 20:04:35 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:04:35 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:04:35 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:04:35 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:04:35 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:04:35 - INFO - datasets.builder - Generating train split
+03/30/2024 20:05:08 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:05:08 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:05:16 - INFO - __main__ - 0.txt has been loaded
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:05:17 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:05:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:06:54 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:06:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:07:26 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:07:39 - INFO - datasets.builder - Using custom data configuration default-cd8a19413b1dc300
+03/30/2024 20:07:39 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:07:39 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:07:39 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:07:39 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:07:39 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:07:39 - INFO - datasets.builder - Generating train split
+03/30/2024 20:08:22 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:08:22 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:08:34 - INFO - __main__ - 1302428.txt has been loaded
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:08:35 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:08:36 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:08:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:08:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:08:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:08:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:08:39 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:08:40 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:08:40 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:10:20 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:10:21 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:10:54 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:11:05 - INFO - datasets.builder - Using custom data configuration default-23dbc284c15f5c3d
+03/30/2024 20:11:05 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:11:05 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:11:05 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:11:05 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:11:05 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:11:05 - INFO - datasets.builder - Generating train split
+03/30/2024 20:11:44 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:11:44 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:11:50 - INFO - __main__ - 1953642.txt has been loaded
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:11:50 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:11:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:11:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:11:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:11:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:11:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:11:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:11:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:11:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:13:26 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:13:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:14:00 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:14:12 - INFO - datasets.builder - Using custom data configuration default-408502fcd017c958
+03/30/2024 20:14:12 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:14:12 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:14:12 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:14:12 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:14:12 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:14:12 - INFO - datasets.builder - Generating train split
+03/30/2024 20:14:49 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:14:49 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:14:56 - INFO - __main__ - 2604856.txt has been loaded
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:14:56 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:14:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:14:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:14:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:14:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:14:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:14:58 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:14:59 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:14:59 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:16:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:17:05 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:17:17 - INFO - datasets.builder - Using custom data configuration default-b47f8c769e75fef9
+03/30/2024 20:17:17 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:17:17 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:17:17 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:17:17 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:17:17 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:17:17 - INFO - datasets.builder - Generating train split
+03/30/2024 20:17:57 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:17:57 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:18:10 - INFO - __main__ - 3256070.txt has been loaded
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:18:10 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:18:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:18:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:18:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:18:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:18:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:18:13 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:18:14 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:18:14 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:19:51 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:20:21 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:20:34 - INFO - datasets.builder - Using custom data configuration default-52455d90138f0362
+03/30/2024 20:20:34 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:20:34 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:20:34 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:20:34 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:20:34 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:20:34 - INFO - datasets.builder - Generating train split
+03/30/2024 20:21:10 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:21:10 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:21:18 - INFO - __main__ - 3907284.txt has been loaded
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:21:18 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:21:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:21:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:21:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:21:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:21:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:21:20 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:21:20 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:21:20 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:22:53 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:22:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:23:24 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:23:40 - INFO - datasets.builder - Using custom data configuration default-a53913b4e5961a48
+03/30/2024 20:23:40 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+03/30/2024 20:23:40 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+03/30/2024 20:23:40 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+03/30/2024 20:23:40 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+03/30/2024 20:23:40 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+03/30/2024 20:23:40 - INFO - datasets.builder - Generating train split
+03/30/2024 20:24:22 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+03/30/2024 20:24:22 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+03/30/2024 20:24:28 - INFO - __main__ - 651214.txt has been loaded
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:24:28 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:24:29 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00007_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00000_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00001_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00003_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00005_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00006_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00002_of_00008.arrow
+03/30/2024 20:24:30 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00004_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Spawning 8 processes
+03/30/2024 20:26:02 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00000_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00004_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00001_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00002_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00003_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00007_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00005_of_00008.arrow
+03/30/2024 20:26:03 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00006_of_00008.arrow
+03/30/2024 20:26:32 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+03/30/2024 20:26:47 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_text_512/cache-b809ec5febc08b30.arrow
+03/30/2024 20:26:50 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_text_512/cache-ea1222c006e9a75e.arrow
+03/30/2024 20:26:50 - INFO - __main__ - Num train_samples  3289876
+03/30/2024 20:26:50 - INFO - __main__ - Training example:
+03/30/2024 20:26:50 - INFO - __main__ -  এরশাদ গদি থেকে নামার পরে প্রথমে কিছুদিন সমরেন্দ্র পালিয়ে ছিল।</s><s> চালিতাখালী গেলেই সুবিধা, বিশাল চরের পরে সে গ্রাম, আবার অন্য জেলা।</s><s> সেখানে বাপ-দাদার ভিটায় সমরেন্দ্র কেন কী কাজে এসেছে, কেউ ডেকে জিজ্ঞাসা করারও নেই।</s><s> কিন্তু তার নাগেরবাজারের বাড়িতে থাকে বউ আর ছেলে, সেখানে মাঝেমধ্যে সমরের খোঁজে আসে সব দলের লোকজন।</s><s> তারা এরশাদকে গদি দিয়ে নামিয়েছে, সমরেন্দ্র জাতীয় পার্টি করত, ও সময়ে কন্ট্রাক্টরি করে পয়সাপাতি কম কামায়নি, এখন তার কিছু ভাগ চায়।</s><s> ওদিকে সমরেন্দ্রর ছেলে সমীর জ্যোতির্ময়ের ঠিক উল্টো।</s><s> প্রায়শ ঘরে থাকে না। খেলে বেড়ায়।</s><s> ফুটবলের সময় ফুটবল, ক্রিকেটের সময় ক্রিকেট।</s><s> সারাদিন ক্রিকেট খেলে সন্ধ্যারাতে ব্যাডমিন্টন।</s><s> সব খেলায় আছে।</s><s> তাকে এমনিতে কেউ কিছু বলেনি।</s><s> তবে মাঝেমধ্যে ওর কাছে জানতে চাইত, 'ও ভাইপো, তোমার বাবারে দেকতিচি না, গেইচে কোথায়?'</s><s> সমীর বলত, সে জানে না।</s><s> সমীর আসলেই হয়তো জানত না তার বাপ কোথায়।</s><s> অথবা, জানত যে বাবা এখন চালিতাখালী, কিন্তু মা তাকে বলতে মানা করেছে।</s><s> অথবা, সে জানেই না চালিতাখালী না কোনো কাজে ঢাকা অথবা অন্য কোথাও গেছে।</s><s> যেখানেই থাক, সমীর মায়ের নির্দেশমতো একটু চুপ করে থাকত।</s><s> অথবা বলত, মনে হয় বাড়ি গেইছে।</s><s> বাড়ি যাওয়ার কথা সে আগেও বলেছে।</s><s> কিন্তু তার জবাবে একদিন তাকে শুনতে হলো, 'নাকি ইন্ডিয়ায় চইলে গেইচে?</s><s> হিন্দগো তো আচে ওই একটা জায়গা, আর যাবে কোয়ানে?'</s><s> সমীর সে-কথা মাকে বলে।</s><s> সেখান থেকে শোনে মহামায়া।</s><s> মহামায়ার কাছ থেকে কথায় কথায় জানতে পারে জগৎলাল। জানার কথা।</s><s> জগৎলাল এমন কথা জানে।</s><s> কেউ কেউ তাকে ঝিমাতে দেখে বলেওছে, 'দাদা কি দোকান-টোকান আর করবেন না?</s><s> এহোন খালি দোকানের সামনে বইসে ঝিমোন!'</s><s> জগৎলালের তাতে ঝিমোনো ভাব কিছুটা কাটে।</s><s>ভাবে, সম
+03/30/2024 20:26:50 - INFO - __main__ - Num eval_samples  3294
+03/30/2024 20:26:50 - INFO - __main__ - Evaluation example:
+03/30/2024 20:26:50 - INFO - __main__ -  বাংলাদেশি ভাই-বোনদের প্রতি অনুরোধ জানাই, অন্তত টেক্সট কিংবা ফোন করে নির্বাচন বিষয়ে এই গুরুত্বপূর্ণ সভায় উপস্থিতির বিষয়টি অনুগ্রহ করে নিশ্চিত করুন।</s><s> আমি বা আমার যেকোনো নির্বাচন কমিশনারকে জানালে আমরা কৃতার্থ হব।"</s><s> জর্জিয়া বাংলাদেশ সমিতির নির্বাচন কমিশনের পক্ষে বিজ্ঞপ্তিতে স্বাক্ষর করেন প্রধান নির্বাচন কমিশনার মশিউর রহমান চৌধুরী, ফোন: ৪০৪-৭২৯-৪০৭৬ এবং চার নির্বাচন কমিশনার যথাক্রমে শাকুর মিন্টু (৪০৪-৪৫৪-০৩৮৭), মামুন শরীফ (৪০৪-৯০৩-৪৯১৬), মোহাম্মদ ওয়াসি উদ্দিন (৬৭৮-৭৭০-৪৫৮৭) ও ইলা চন্দ (৬৭৮-৭৫৫-৬৫২৬)।</s><s> প্রবাস পাতায় আপনিও লিখতে পারেন।</s><s> প্রবাস জীবনে আপনার ভ্রমণ,আড্ডা,আনন্দ বেদনার গল্প,ছোট ছোট অনুভূতি,দেশের স্মৃতিচারণ,রাজনৈতিক ও সাংস্কৃতিক খবর আমাদের দিতে পারেন।</s><s> লেখা পাঠানোর ঠিকানা probash@bdnews24.com।</s><s> সাথে ছবি দিতে ভুলবেন না যেন!</s><s></s><s> ভোটকেন্দ্রে গিয়ে করোনা আক্রান্ত হলে দায় নেবে না ইসি</s><s> শনিবার (১১ জুলাই) বিকেলে বগুড়া জেলা প্রশাসকের সম্মেলন কক্ষে আইনশৃঙ্খলা কমিটির সঙ্গে বৈঠক শেষে সংবাদ সম্মেলনে সিইসি এ কথা বলেন।</s><s> আগামী ১৪ জুলাই বগুড়া-১ আসনের নির্বাচন উপলক্ষে সাংবাদিকদের প্রশ্নের উত্তরে সিইসি আরো জানান, ২ পারসেন্ট ভোট হলেও নির্বাচনের উপর প্রভাব পড়বে না।</s><s> বন্যা-বর্ষাবাদল, দুর্যোগ মাথায় রেখেও সংবিধানের বাধ্যবাধকতার জন্য এই সময়ে নির্বাচন করতে হচ্ছে বলে জানান তিনি।</s><s> সংবাদ সম্মেলনে নির্বাচন কমিশনার ব্রিগেডিয়ার (অব.)</s><s> শাহাদত হোসেন চৌধুরী, জেলা প্রশাসক জিয়াউল হক, পুলিশ সুপার আলী আশরাফ ভূঁইয়া প্রমুখ উপস্থিত ছিলেন।</s><s> উল্লেখ্য, গত ১৭ জানুয়ারি বগুড়া ১ আসনের সংসদ সদস্য আব্দুল মান্নান মারা গেলে আসনটি শূন্য হয়।</s><s>এরপর ২৯ মার্চ নির্বাচনের
+03/30/2024 20:29:29 - INFO - __main__ - Model vocab size: 32000
+03/30/2024 20:29:29 - INFO - __main__ - Tokenizer vocab size: 48673
+03/30/2024 20:29:29 - INFO - __main__ - Resize model vocab size to 48673
+03/30/2024 20:29:29 - INFO - __main__ - Init new peft model
+03/30/2024 20:29:29 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+03/30/2024 20:29:29 - INFO - __main__ - lora_rank: 64
+03/30/2024 20:29:32 - INFO - __main__ - model.modules_to_save: {'embed_tokens', 'lm_head'}
