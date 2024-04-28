@@ -72,7 +72,7 @@ os.environ["WANDB_ENTITY"]="ccds-bangla-nlp"
 os.environ["WANDB_PROJECT"]="bangla_llama_pretraining"
 
 # save your trained model checkpoint to wandb
-os.environ["WANDB_LOG_MODEL"]="end"
+os.environ["WANDB_LOG_MODEL"]="false"
 
 # turn off watch to log faster
 os.environ["WANDB_WATCH"]="false"
@@ -451,6 +451,10 @@ def main():
         (ModelArguments, DataTrainingArguments, MyTrainingArguments)
     )
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+    if training_args.use_flash_attention_2:
+        from flash_attn_patch import replace_llama_attn_with_flash_attn
+        replace_llama_attn_with_flash_attn()
+
 
     # Sending telemetry. Tracking the example usage helps us better allocate resources to maintain them. The
     # information sent is the one passed as arguments along with your Python/PyTorch versions.
@@ -677,6 +681,7 @@ def main():
 
     if training_args.do_train:
         train_dataset = lm_datasets["train"]
+        # train_dataset = train_dataset.select(range(1910000, len(lm_datasets["train"])))
         if data_args.max_train_samples is not None:
             max_train_samples = min(len(train_dataset), data_args.max_train_samples)
             train_dataset = train_dataset.select(range(max_train_samples))
@@ -732,13 +737,13 @@ def main():
             cache_dir=model_args.cache_dir,
             revision=model_args.model_revision,
             use_auth_token=True if model_args.use_auth_token else None,
-            # torch_dtype=torch_dtype,
+            torch_dtype=torch_dtype,
             low_cpu_mem_usage=True,
             device_map=device_map,
             load_in_4bit=load_in_4bit,
             load_in_8bit=load_in_8bit,
             quantization_config=quantization_config,
-            use_flash_attention_2=training_args.use_flash_attention_2,
+            # use_flash_attention_2=training_args.use_flash_attention_2,
             use_safetensors=False
         )
     else:

@@ -1,9 +1,9 @@
 gdown
 wheel
-git+https://github.com/huggingface/peft.git@13e53fc
 transformers==4.35.0
 sentencepiece==0.1.99
 bitsandbytes==0.41.1
+peft
 packaging
 wheel
 # flash-attn

@@ -47,7 +47,7 @@ base_model_name="meta-llama/Llama-2-7b-hf"
 bangla_tokenizer_path="../../tokenizer"
 
 output_dir="../../output"
-checkpoint=15100
+checkpoint=25700
 model_to_push = f"{output_dir}/checkpoint-{checkpoint}"
 
 base_model = AutoModelForCausalLM.from_pretrained(
@@ -74,12 +74,12 @@ if model_vocab_size != len(tokenizer):
 
 
 model = PeftModel.from_pretrained(base_model, model_to_push)
-model = model.merge_and_unload()
+# model = model.merge_and_unload()
 
-hf_model_repo_dir = "meherajj/bangla-llama-2-7b"
+hf_model_repo_dir = "meherajj/bangla-llama-2-7b-lora-ckpt-25700"
 
-model.push_to_hub(hf_model_repo_dir, commit_message=f"Upload checkpoint {checkpoint}", use_temp_dir=True, private=True)
-tokenizer.push_to_hub(hf_model_repo_dir, commit_message="Upload bangla tokenizer", use_temp_dir=True, private=True)
+model.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
+tokenizer.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
 
 # # Initialize the HfApi class
 # api = HfApi()
@@ -96,3 +96,30 @@ tokenizer.push_to_hub(hf_model_repo_dir, commit_message="Upload bangla tokenizer
 #     # revision="nf4",  # Specify the branch you want to push to
 #     token=True,
 # )
+
+formatted_prompt = "ঢাকা বাংলাদেশের রাজধানী এবং বৃহত্তম শহর। "
+
+# Specify device
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+# Tokenize input prompt
+inputs = tokenizer(formatted_prompt, return_tensors="pt").to(device)
+
+# Get answer
+# (Adjust max_new_tokens variable as you wish (maximum number of tokens the model can generate to answer the input))
+outputs = model.generate(input_ids=inputs["input_ids"].to(device),
+                        attention_mask=inputs["attention_mask"],
+                        max_new_tokens=512,
+                        do_sample=True,
+                        temperature=0.2,
+                        repetition_penalty=1.1,
+                        # num_beams=1,
+                        top_k = 40,
+                        top_p = 0.9,
+                        )
+
+# Decode output & print it
+output  = tokenizer.decode(outputs[0], skip_special_tokens=True)
+print(output)
+
+# answer_text = output[len(formatted_prompt)-1:]

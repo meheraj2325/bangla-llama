@@ -337,3 +337,510 @@
 03/30/2024 20:29:29 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
 03/30/2024 20:29:29 - INFO - __main__ - lora_rank: 64
 03/30/2024 20:29:32 - INFO - __main__ - model.modules_to_save: {'embed_tokens', 'lm_head'}
+04/24/2024 07:08:15 - INFO - __main__ - Using Flash Attention!
+04/24/2024 07:08:15 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+04/24/2024 07:13:12 - INFO - __main__ - Using Flash Attention!
+04/24/2024 07:13:12 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+04/24/2024 07:13:15 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/24/2024 07:13:17 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/24/2024 07:13:19 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/24/2024 07:13:22 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/24/2024 07:13:24 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/24/2024 07:13:26 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/24/2024 07:13:28 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/24/2024 07:13:28 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-65732e60993076e2.arrow
+04/24/2024 07:13:33 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-99c49c67fbc7f1dc.arrow
+04/24/2024 07:13:33 - INFO - __main__ - Num train_samples  1379876
+04/24/2024 07:13:33 - INFO - __main__ - Training example:
+04/24/2024 07:13:33 - INFO - __main__ - <s> মহিন্দর অমরনাথের একাডেমিতে সুযোগ পেতে রাজকোট থেকে বরোদায় এসেছিলেন প্রিয়াংশু।</s><s> অমরনাথ পাকা জহুরির মতোই রত্ন চিনতে ভুল করেননি।</s><s> প্রিয়াংশুকে নিয়ে অনেক আশা ১৯৮৩ বিশ্বকাপজয়ী সাবেক এই ক্রিকেটারের, 'প্রথম দেখাতেই বুঝেছি সে বিশেষ কেউ।</s><s> বেড়ে ওঠার সঙ্গে তাঁর ব্যাটিং আরও প্রস্ফুটিত হবে।</s><s> ব্যাটিংয়ের সময় ধৈর্য আর খেলাটির প্রতিও তাঁর ভালোবাসা আছে।'</s><s></s><s> যিহোবা আপনার পূর্ণ হৃদয়ের সেবাকে উপলব্ধি করেন, ১০/১৫ Jehovah Cherishes Your Whole-Souled Service, 10/15</s><s></s><s> পুজোয় রেশনে চিনি, সাদা তেল, ময়দা</s><s> পুজোর সময় রাজ্যের রেশন দোকানগুলি থেকে চাল, গম বা কেরোসিনের পাশাপাশি মিলবে ময়দা, চিনি ও সাদা তেলও।</s><s> বুধবার দুপুরে শিলিগুড়িতে পুজো স্পেশাল এই প্যাকেজের ঘোষণা করেছেন রাজ্যের খাদ্যমন্ত্রী জ্যোতিপ্রিয় মল্লিক।</s><s> মন্ত্রীর দাবি, আগামী ১৮ অক্টোবর, পঞ্চমীর দিন থেকে ২১ অক্টোবর, অষ্টমীর দিন বিকাল অবধি মিলবে ওই পুজো স্পেশাল।</s><s> শিলিগুড়িতে দফতরের আধিকারিক, রেশন ডিলার-ডিস্ট্রিবিউটর, রাইস মিল, ময়দা মিলের বিভিন্ন সংগঠনের প্রতিনিধিদের সঙ্গে বৈঠকের পর মন্ত্রী ওই ঘোষণা করেন।</s><s> খাদ্য দফতর সূত্রের খবর, সকাল ৭টা থেকে রেশন দোকানগুলি ওই চারদিন খুলে রেখে পুজো স্পেশাল বিলির নির্দেশ দেওয়া হয়েছে।</s><s> ময়দা, সাদা তেল এবং চিনি-প্রতি পরিবার পিছু ১ কিলোগ্রাম করে পাওয়া যাবে।</s><s> এই ক্ষেত্রে এপিএল বা বিপিএলের কোনও ব্যাপার নেই।</s><s> খাদ্যমন্ত্রী জ্যোতিপ্রিয়বাবু বলেন, ''পুজোর দিনগুলি আমাদের সবার কাছে বিশেষ দিন।</s><s> তাই বাসিন্দাদের জন্য আমরা কিছু ব্যবস্থা করেছি।</s><s> লুচি, পরোটা ভাজার সাদা তেল বা ময়দা তো থাকছে।</s><s> পাশাপাশি, চিনিও দেওয়া হবে।</s><s> দামও নাগালের মধ্যে থাকবে।</s>
+04/24/2024 07:13:33 - INFO - __main__ - Num eval_samples  3294
+04/24/2024 07:13:33 - INFO - __main__ - Evaluation example:
+04/24/2024 07:13:33 - INFO - __main__ -  বাংলাদেশি ভাই-বোনদের প্রতি অনুরোধ জানাই, অন্তত টেক্সট কিংবা ফোন করে নির্বাচন বিষয়ে এই গুরুত্বপূর্ণ সভায় উপস্থিতির বিষয়টি অনুগ্রহ করে নিশ্চিত করুন।</s><s> আমি বা আমার যেকোনো নির্বাচন কমিশনারকে জানালে আমরা কৃতার্থ হব।"</s><s> জর্জিয়া বাংলাদেশ সমিতির নির্বাচন কমিশনের পক্ষে বিজ্ঞপ্তিতে স্বাক্ষর করেন প্রধান নির্বাচন কমিশনার মশিউর রহমান চৌধুরী, ফোন: ৪০৪-৭২৯-৪০৭৬ এবং চার নির্বাচন কমিশনার যথাক্রমে শাকুর মিন্টু (৪০৪-৪৫৪-০৩৮৭), মামুন শরীফ (৪০৪-৯০৩-৪৯১৬), মোহাম্মদ ওয়াসি উদ্দিন (৬৭৮-৭৭০-৪৫৮৭) ও ইলা চন্দ (৬৭৮-৭৫৫-৬৫২৬)।</s><s> প্রবাস পাতায় আপনিও লিখতে পারেন।</s><s> প্রবাস জীবনে আপনার ভ্রমণ,আড্ডা,আনন্দ বেদনার গল্প,ছোট ছোট অনুভূতি,দেশের স্মৃতিচারণ,রাজনৈতিক ও সাংস্কৃতিক খবর আমাদের দিতে পারেন।</s><s> লেখা পাঠানোর ঠিকানা probash@bdnews24.com।</s><s> সাথে ছবি দিতে ভুলবেন না যেন!</s><s></s><s> ভোটকেন্দ্রে গিয়ে করোনা আক্রান্ত হলে দায় নেবে না ইসি</s><s> শনিবার (১১ জুলাই) বিকেলে বগুড়া জেলা প্রশাসকের সম্মেলন কক্ষে আইনশৃঙ্খলা কমিটির সঙ্গে বৈঠক শেষে সংবাদ সম্মেলনে সিইসি এ কথা বলেন।</s><s> আগামী ১৪ জুলাই বগুড়া-১ আসনের নির্বাচন উপলক্ষে সাংবাদিকদের প্রশ্নের উত্তরে সিইসি আরো জানান, ২ পারসেন্ট ভোট হলেও নির্বাচনের উপর প্রভাব পড়বে না।</s><s> বন্যা-বর্ষাবাদল, দুর্যোগ মাথায় রেখেও সংবিধানের বাধ্যবাধকতার জন্য এই সময়ে নির্বাচন করতে হচ্ছে বলে জানান তিনি।</s><s> সংবাদ সম্মেলনে নির্বাচন কমিশনার ব্রিগেডিয়ার (অব.)</s><s> শাহাদত হোসেন চৌধুরী, জেলা প্রশাসক জিয়াউল হক, পুলিশ সুপার আলী আশরাফ ভূঁইয়া প্রমুখ উপস্থিত ছিলেন।</s><s> উল্লেখ্য, গত ১৭ জানুয়ারি বগুড়া ১ আসনের সংসদ সদস্য আব্দুল মান্নান মারা গেলে আসনটি শূন্য হয়।</s><s>এরপর ২৯ মার্চ নির্বাচনের
+04/24/2024 07:15:16 - INFO - __main__ - Model vocab size: 32000
+04/24/2024 07:15:16 - INFO - __main__ - Tokenizer vocab size: 48673
+04/24/2024 07:15:16 - INFO - __main__ - Resize model vocab size to 48673
+04/24/2024 07:15:16 - INFO - __main__ - Init new peft model
+04/24/2024 07:15:16 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/24/2024 07:15:16 - INFO - __main__ - lora_rank: 64
+04/24/2024 07:15:18 - INFO - __main__ - model.modules_to_save: {'embed_tokens', 'lm_head'}
+04/24/2024 07:16:45 - INFO - __main__ - *** Evaluate ***
+04/24/2024 13:40:19 - INFO - __main__ - Using Flash Attention!
+04/24/2024 13:40:19 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+04/24/2024 13:40:20 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/24/2024 13:40:21 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/24/2024 13:40:22 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/24/2024 13:40:22 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/24/2024 13:40:23 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/24/2024 13:40:24 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/24/2024 13:40:24 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/24/2024 13:40:25 - INFO - datasets.arrow_dataset - Loading cached split indices for dataset at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-65732e60993076e2.arrow and /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-99c49c67fbc7f1dc.arrow
+04/24/2024 13:40:28 - INFO - __main__ - Num train_samples  3289876
+04/24/2024 13:40:28 - INFO - __main__ - Training example:
+04/24/2024 13:40:28 - INFO - __main__ -  এরশাদ গদি থেকে নামার পরে প্রথমে কিছুদিন সমরেন্দ্র পালিয়ে ছিল।</s><s> চালিতাখালী গেলেই সুবিধা, বিশাল চরের পরে সে গ্রাম, আবার অন্য জেলা।</s><s> সেখানে বাপ-দাদার ভিটায় সমরেন্দ্র কেন কী কাজে এসেছে, কেউ ডেকে জিজ্ঞাসা করারও নেই।</s><s> কিন্তু তার নাগেরবাজারের বাড়িতে থাকে বউ আর ছেলে, সেখানে মাঝেমধ্যে সমরের খোঁজে আসে সব দলের লোকজন।</s><s> তারা এরশাদকে গদি দিয়ে নামিয়েছে, সমরেন্দ্র জাতীয় পার্টি করত, ও সময়ে কন্ট্রাক্টরি করে পয়সাপাতি কম কামায়নি, এখন তার কিছু ভাগ চায়।</s><s> ওদিকে সমরেন্দ্রর ছেলে সমীর জ্যোতির্ময়ের ঠিক উল্টো।</s><s> প্রায়শ ঘরে থাকে না। খেলে বেড়ায়।</s><s> ফুটবলের সময় ফুটবল, ক্রিকেটের সময় ক্রিকেট।</s><s> সারাদিন ক্রিকেট খেলে সন্ধ্যারাতে ব্যাডমিন্টন।</s><s> সব খেলায় আছে।</s><s> তাকে এমনিতে কেউ কিছু বলেনি।</s><s> তবে মাঝেমধ্যে ওর কাছে জানতে চাইত, 'ও ভাইপো, তোমার বাবারে দেকতিচি না, গেইচে কোথায়?'</s><s> সমীর বলত, সে জানে না।</s><s> সমীর আসলেই হয়তো জানত না তার বাপ কোথায়।</s><s> অথবা, জানত যে বাবা এখন চালিতাখালী, কিন্তু মা তাকে বলতে মানা করেছে।</s><s> অথবা, সে জানেই না চালিতাখালী না কোনো কাজে ঢাকা অথবা অন্য কোথাও গেছে।</s><s> যেখানেই থাক, সমীর মায়ের নির্দেশমতো একটু চুপ করে থাকত।</s><s> অথবা বলত, মনে হয় বাড়ি গেইছে।</s><s> বাড়ি যাওয়ার কথা সে আগেও বলেছে।</s><s> কিন্তু তার জবাবে একদিন তাকে শুনতে হলো, 'নাকি ইন্ডিয়ায় চইলে গেইচে?</s><s> হিন্দগো তো আচে ওই একটা জায়গা, আর যাবে কোয়ানে?'</s><s> সমীর সে-কথা মাকে বলে।</s><s> সেখান থেকে শোনে মহামায়া।</s><s> মহামায়ার কাছ থেকে কথায় কথায় জানতে পারে জগৎলাল। জানার কথা।</s><s> জগৎলাল এমন কথা জানে।</s><s> কেউ কেউ তাকে ঝিমাতে দেখে বলেওছে, 'দাদা কি দোকান-টোকান আর করবেন না?</s><s> এহোন খালি দোকানের সামনে বইসে ঝিমোন!'</s><s> জগৎলালের তাতে ঝিমোনো ভাব কিছুটা কাটে।</s><s>ভাবে, সম
+04/24/2024 13:40:28 - INFO - __main__ - Num eval_samples  3294
+04/24/2024 13:40:28 - INFO - __main__ - Evaluation example:
+04/24/2024 13:40:28 - INFO - __main__ -  বাংলাদেশি ভাই-বোনদের প্রতি অনুরোধ জানাই, অন্তত টেক্সট কিংবা ফোন করে নির্বাচন বিষয়ে এই গুরুত্বপূর্ণ সভায় উপস্থিতির বিষয়টি অনুগ্রহ করে নিশ্চিত করুন।</s><s> আমি বা আমার যেকোনো নির্বাচন কমিশনারকে জানালে আমরা কৃতার্থ হব।"</s><s> জর্জিয়া বাংলাদেশ সমিতির নির্বাচন কমিশনের পক্ষে বিজ্ঞপ্তিতে স্বাক্ষর করেন প্রধান নির্বাচন কমিশনার মশিউর রহমান চৌধুরী, ফোন: ৪০৪-৭২৯-৪০৭৬ এবং চার নির্বাচন কমিশনার যথাক্রমে শাকুর মিন্টু (৪০৪-৪৫৪-০৩৮৭), মামুন শরীফ (৪০৪-৯০৩-৪৯১৬), মোহাম্মদ ওয়াসি উদ্দিন (৬৭৮-৭৭০-৪৫৮৭) ও ইলা চন্দ (৬৭৮-৭৫৫-৬৫২৬)।</s><s> প্রবাস পাতায় আপনিও লিখতে পারেন।</s><s> প্রবাস জীবনে আপনার ভ্রমণ,আড্ডা,আনন্দ বেদনার গল্প,ছোট ছোট অনুভূতি,দেশের স্মৃতিচারণ,রাজনৈতিক ও সাংস্কৃতিক খবর আমাদের দিতে পারেন।</s><s> লেখা পাঠানোর ঠিকানা probash@bdnews24.com।</s><s> সাথে ছবি দিতে ভুলবেন না যেন!</s><s></s><s> ভোটকেন্দ্রে গিয়ে করোনা আক্রান্ত হলে দায় নেবে না ইসি</s><s> শনিবার (১১ জুলাই) বিকেলে বগুড়া জেলা প্রশাসকের সম্মেলন কক্ষে আইনশৃঙ্খলা কমিটির সঙ্গে বৈঠক শেষে সংবাদ সম্মেলনে সিইসি এ কথা বলেন।</s><s> আগামী ১৪ জুলাই বগুড়া-১ আসনের নির্বাচন উপলক্ষে সাংবাদিকদের প্রশ্নের উত্তরে সিইসি আরো জানান, ২ পারসেন্ট ভোট হলেও নির্বাচনের উপর প্রভাব পড়বে না।</s><s> বন্যা-বর্ষাবাদল, দুর্যোগ মাথায় রেখেও সংবিধানের বাধ্যবাধকতার জন্য এই সময়ে নির্বাচন করতে হচ্ছে বলে জানান তিনি।</s><s> সংবাদ সম্মেলনে নির্বাচন কমিশনার ব্রিগেডিয়ার (অব.)</s><s> শাহাদত হোসেন চৌধুরী, জেলা প্রশাসক জিয়াউল হক, পুলিশ সুপার আলী আশরাফ ভূঁইয়া প্রমুখ উপস্থিত ছিলেন।</s><s> উল্লেখ্য, গত ১৭ জানুয়ারি বগুড়া ১ আসনের সংসদ সদস্য আব্দুল মান্নান মারা গেলে আসনটি শূন্য হয়।</s><s>এরপর ২৯ মার্চ নির্বাচনের
+04/24/2024 13:41:15 - INFO - __main__ - Model vocab size: 32000
+04/24/2024 13:41:15 - INFO - __main__ - Tokenizer vocab size: 48673
+04/24/2024 13:41:15 - INFO - __main__ - Resize model vocab size to 48673
+04/24/2024 13:41:15 - INFO - __main__ - Init new peft model
+04/24/2024 13:41:15 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/24/2024 13:41:15 - INFO - __main__ - lora_rank: 64
+04/24/2024 13:41:17 - INFO - __main__ - model.modules_to_save: {'embed_tokens', 'lm_head'}
+04/26/2024 15:45:21 - INFO - __main__ - *** Evaluate ***
+04/26/2024 19:18:09 - INFO - __main__ - Using Flash Attention!
+04/26/2024 19:18:09 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/26/2024 19:18:12 - INFO - datasets.builder - Using custom data configuration default-942c3c1054f5c3cb
+04/26/2024 19:18:12 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 19:18:12 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 19:18:12 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 19:18:12 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 19:18:12 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 19:18:13 - INFO - datasets.builder - Generating train split
+04/26/2024 19:18:57 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 19:18:57 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/0_text_512/text/default-942c3c1054f5c3cb/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 19:19:13 - INFO - __main__ - 0.txt has been loaded
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/0_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:19:13 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:19:15 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:19:17 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:19:17 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:19:17 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:19:17 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:19:18 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:19:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:19:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/0_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:23:10 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:23:12 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/0_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:24:45 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:27:33 - INFO - datasets.builder - Using custom data configuration default-cd8a19413b1dc300
+04/26/2024 19:27:33 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 19:27:34 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 19:27:34 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 19:27:34 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 19:27:34 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 19:27:34 - INFO - datasets.builder - Generating train split
+04/26/2024 19:28:28 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 19:28:28 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1302428_text_512/text/default-cd8a19413b1dc300/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 19:28:43 - INFO - __main__ - 1302428.txt has been loaded
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:28:43 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:28:44 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:28:46 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:28:47 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:28:47 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:28:47 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:28:47 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:28:48 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:28:48 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:28:48 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:32:36 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1302428_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:32:37 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1302428_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:34:04 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:36:52 - INFO - datasets.builder - Using custom data configuration default-23dbc284c15f5c3d
+04/26/2024 19:36:52 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 19:36:52 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 19:36:52 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 19:36:52 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 19:36:52 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 19:36:52 - INFO - datasets.builder - Generating train split
+04/26/2024 19:37:42 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 19:37:42 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/1953642_text_512/text/default-23dbc284c15f5c3d/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 19:37:58 - INFO - __main__ - 1953642.txt has been loaded
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:37:58 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:37:59 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:38:01 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:38:02 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:38:02 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:38:02 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:38:02 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:38:04 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:38:04 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:38:05 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:41:52 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/1953642_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:41:53 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:41:54 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/1953642_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:43:27 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:46:18 - INFO - datasets.builder - Using custom data configuration default-408502fcd017c958
+04/26/2024 19:46:18 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 19:46:18 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 19:46:18 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 19:46:18 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 19:46:18 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 19:46:19 - INFO - datasets.builder - Generating train split
+04/26/2024 19:47:11 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 19:47:11 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/2604856_text_512/text/default-408502fcd017c958/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 19:47:29 - INFO - __main__ - 2604856.txt has been loaded
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:47:29 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:47:30 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:47:32 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:47:33 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:47:33 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:47:33 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:47:33 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:47:35 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:47:36 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:47:36 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:51:25 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/2604856_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:51:26 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00000_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00004_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00001_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00007_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00002_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00006_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00005_of_00008.arrow
+04/26/2024 19:51:27 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/2604856_text_512/grouped_00003_of_00008.arrow
+04/26/2024 19:52:58 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 19:55:38 - INFO - datasets.builder - Using custom data configuration default-b47f8c769e75fef9
+04/26/2024 19:55:38 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 19:55:38 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 19:55:38 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 19:55:38 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 19:55:38 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 19:55:38 - INFO - datasets.builder - Generating train split
+04/26/2024 19:56:31 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 19:56:31 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3256070_text_512/text/default-b47f8c769e75fef9/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 19:56:48 - INFO - __main__ - 3256070.txt has been loaded
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:56:48 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 19:56:51 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 19:56:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 19:56:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 19:56:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 19:56:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 19:56:53 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 19:56:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 19:56:55 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 20:00:42 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3256070_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:00:43 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:00:44 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3256070_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:02:19 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:05:05 - INFO - datasets.builder - Using custom data configuration default-52455d90138f0362
+04/26/2024 20:05:05 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 20:05:05 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 20:05:05 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 20:05:05 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 20:05:05 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 20:05:05 - INFO - datasets.builder - Generating train split
+04/26/2024 20:06:02 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 20:06:02 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/3907284_text_512/text/default-52455d90138f0362/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 20:06:20 - INFO - __main__ - 3907284.txt has been loaded
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 20:06:20 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 20:06:23 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 20:06:24 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 20:06:24 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 20:06:24 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 20:06:24 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 20:06:25 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 20:06:26 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 20:06:26 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/3907284_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:10:18 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:10:19 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/3907284_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:11:54 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:14:45 - INFO - datasets.builder - Using custom data configuration default-a53913b4e5961a48
+04/26/2024 20:14:46 - INFO - datasets.info - Loading Dataset Infos from /home/ubuntu/bangla-llama-fs/bangla-llama/venv/lib/python3.10/site-packages/datasets/packaged_modules/text
+04/26/2024 20:14:46 - INFO - datasets.builder - Generating dataset text (/home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34)
+04/26/2024 20:14:46 - INFO - datasets.builder - Downloading and preparing dataset text/default to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34...
+04/26/2024 20:14:46 - INFO - datasets.download.download_manager - Downloading took 0.0 min
+04/26/2024 20:14:46 - INFO - datasets.download.download_manager - Checksum Computation took 0.0 min
+04/26/2024 20:14:46 - INFO - datasets.builder - Generating train split
+04/26/2024 20:15:38 - INFO - datasets.utils.info_utils - Unable to verify splits sizes.
+04/26/2024 20:15:38 - INFO - datasets.builder - Dataset text downloaded and prepared to /home/ubuntu/bangla-llama-fs/bangla-llama/scripts/pretrain/../../data/processed_pretrain_data/651214_text_512/text/default-a53913b4e5961a48/0.0.0/c4a140d10f020282918b5dd1b8a49f0104729c6177f60a6b49ec2a365ec69f34. Subsequent calls will reuse this data.
+04/26/2024 20:15:55 - INFO - __main__ - 651214.txt has been loaded
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/651214_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 20:15:55 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 20:15:57 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00007_of_00008.arrow
+04/26/2024 20:15:58 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00001_of_00008.arrow
+04/26/2024 20:15:58 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00000_of_00008.arrow
+04/26/2024 20:15:58 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00003_of_00008.arrow
+04/26/2024 20:15:58 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00005_of_00008.arrow
+04/26/2024 20:16:00 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00006_of_00008.arrow
+04/26/2024 20:16:01 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00004_of_00008.arrow
+04/26/2024 20:16:01 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/tokenized_00002_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #0 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #1 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #2 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #3 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #4 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #5 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #6 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:19:50 - INFO - datasets.arrow_dataset - Process #7 will write at ../../data/processed_pretrain_data/651214_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:19:51 - INFO - datasets.arrow_dataset - Spawning 8 processes
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00000_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00007_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00003_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00002_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00001_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00004_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00006_of_00008.arrow
+04/26/2024 20:19:52 - INFO - datasets.arrow_dataset - Caching processed dataset at ../../data/processed_pretrain_data/651214_text_512/grouped_00005_of_00008.arrow
+04/26/2024 20:21:28 - INFO - datasets.arrow_dataset - Concatenating 8 shards
+04/26/2024 20:24:15 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_text_512/cache-ba2a5b5ce77135e1.arrow
+04/26/2024 20:24:27 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_text_512/cache-b9c80d3ece167053.arrow
+04/26/2024 20:24:28 - INFO - __main__ - Num train_samples  11991395
+04/26/2024 20:24:28 - INFO - __main__ - Training example:
+04/26/2024 20:24:28 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/26/2024 20:24:28 - INFO - __main__ - Num eval_samples  12004
+04/26/2024 20:24:28 - INFO - __main__ - Evaluation example:
+04/26/2024 20:24:28 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/27/2024 15:58:28 - INFO - __main__ - Using Flash Attention!
+04/27/2024 15:58:28 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/27/2024 15:58:37 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/27/2024 15:58:44 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/27/2024 15:58:52 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/27/2024 15:58:59 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/27/2024 15:59:06 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/27/2024 15:59:16 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/27/2024 15:59:25 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/27/2024 15:59:26 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-c5c3647fe6c52629.arrow
+04/27/2024 15:59:38 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-536bf7b598f46260.arrow
+04/27/2024 15:59:38 - INFO - __main__ - Num train_samples  11991395
+04/27/2024 15:59:38 - INFO - __main__ - Training example:
+04/27/2024 15:59:38 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/27/2024 15:59:38 - INFO - __main__ - Num eval_samples  12004
+04/27/2024 15:59:38 - INFO - __main__ - Evaluation example:
+04/27/2024 15:59:38 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/27/2024 19:39:54 - INFO - __main__ - Using Flash Attention!
+04/27/2024 19:39:54 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/27/2024 19:42:01 - INFO - __main__ - Using Flash Attention!
+04/27/2024 19:42:01 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/27/2024 19:42:04 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/27/2024 19:42:06 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/27/2024 19:42:08 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/27/2024 19:42:10 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/27/2024 19:42:12 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/27/2024 19:42:14 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/27/2024 19:42:16 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/27/2024 19:42:17 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-970995a532be3549.arrow
+04/27/2024 19:42:31 - INFO - datasets.arrow_dataset - Caching indices mapping at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-fb1028c0b481a6c0.arrow
+04/27/2024 19:42:31 - INFO - __main__ - Num train_samples  11991395
+04/27/2024 19:42:31 - INFO - __main__ - Training example:
+04/27/2024 19:42:31 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/27/2024 19:42:31 - INFO - __main__ - Num eval_samples  12004
+04/27/2024 19:42:31 - INFO - __main__ - Evaluation example:
+04/27/2024 19:42:31 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/27/2024 19:44:05 - INFO - __main__ - Model vocab size: 32000
+04/27/2024 19:44:05 - INFO - __main__ - Tokenizer vocab size: 32000
+04/27/2024 19:44:05 - INFO - __main__ - Init new peft model
+04/27/2024 19:44:05 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/27/2024 19:44:05 - INFO - __main__ - lora_rank: 64
+04/27/2024 19:44:59 - INFO - __main__ - model.modules_to_save: ['embed_tokens', 'lm_head']
+04/27/2024 19:51:57 - INFO - __main__ - Using Flash Attention!
+04/27/2024 19:51:57 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/27/2024 19:52:00 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/27/2024 19:52:02 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/27/2024 19:52:05 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/27/2024 19:52:06 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/27/2024 19:52:08 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/27/2024 19:52:10 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/27/2024 19:52:12 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/27/2024 19:52:12 - INFO - datasets.arrow_dataset - Loading cached split indices for dataset at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-970995a532be3549.arrow and /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-fb1028c0b481a6c0.arrow
+04/27/2024 19:52:21 - INFO - __main__ - Num train_samples  11991395
+04/27/2024 19:52:21 - INFO - __main__ - Training example:
+04/27/2024 19:52:21 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/27/2024 19:52:21 - INFO - __main__ - Num eval_samples  12004
+04/27/2024 19:52:21 - INFO - __main__ - Evaluation example:
+04/27/2024 19:52:21 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/27/2024 19:53:24 - INFO - __main__ - Model vocab size: 32000
+04/27/2024 19:53:24 - INFO - __main__ - Tokenizer vocab size: 32000
+04/27/2024 19:53:24 - INFO - __main__ - Init new peft model
+04/27/2024 19:53:24 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/27/2024 19:53:24 - INFO - __main__ - lora_rank: 64
+04/27/2024 19:54:16 - INFO - __main__ - model.modules_to_save: ['embed_tokens', 'lm_head']
+04/27/2024 19:57:40 - INFO - __main__ - Using Flash Attention!
+04/27/2024 19:57:40 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/27/2024 19:57:43 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/27/2024 19:57:45 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/27/2024 19:57:48 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/27/2024 19:57:50 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/27/2024 19:57:52 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/27/2024 19:57:54 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/27/2024 19:57:56 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/27/2024 19:57:57 - INFO - datasets.arrow_dataset - Loading cached split indices for dataset at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-970995a532be3549.arrow and /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-fb1028c0b481a6c0.arrow
+04/27/2024 19:58:08 - INFO - __main__ - Num train_samples  11991395
+04/27/2024 19:58:08 - INFO - __main__ - Training example:
+04/27/2024 19:58:08 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/27/2024 19:58:08 - INFO - __main__ - Num eval_samples  12004
+04/27/2024 19:58:08 - INFO - __main__ - Evaluation example:
+04/27/2024 19:58:08 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/28/2024 03:00:46 - INFO - __main__ - Using Flash Attention!
+04/28/2024 03:00:46 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/28/2024 03:00:49 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/28/2024 03:00:51 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/28/2024 03:00:52 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/28/2024 03:00:54 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/28/2024 03:00:56 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/28/2024 03:00:58 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/28/2024 03:01:00 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/28/2024 03:01:00 - INFO - datasets.arrow_dataset - Loading cached split indices for dataset at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-970995a532be3549.arrow and /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-fb1028c0b481a6c0.arrow
+04/28/2024 03:01:11 - INFO - __main__ - Num train_samples  11991395
+04/28/2024 03:01:11 - INFO - __main__ - Training example:
+04/28/2024 03:01:11 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/28/2024 03:01:11 - INFO - __main__ - Num eval_samples  12004
+04/28/2024 03:01:11 - INFO - __main__ - Evaluation example:
+04/28/2024 03:01:11 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/28/2024 03:01:59 - INFO - __main__ - Model vocab size: 32000
+04/28/2024 03:01:59 - INFO - __main__ - Tokenizer vocab size: 32000
+04/28/2024 03:01:59 - INFO - __main__ - Init new peft model
+04/28/2024 03:01:59 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/28/2024 03:01:59 - INFO - __main__ - lora_rank: 64
+04/28/2024 03:02:55 - INFO - __main__ - model.modules_to_save: ['embed_tokens', 'lm_head']
+04/28/2024 05:44:11 - INFO - __main__ - Using Flash Attention!
+04/28/2024 05:44:11 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: True
+04/28/2024 05:44:18 - INFO - __main__ - training datasets-0 has been loaded from disk
+04/28/2024 05:44:24 - INFO - __main__ - training datasets-1302428 has been loaded from disk
+04/28/2024 05:44:30 - INFO - __main__ - training datasets-1953642 has been loaded from disk
+04/28/2024 05:44:36 - INFO - __main__ - training datasets-2604856 has been loaded from disk
+04/28/2024 05:44:38 - INFO - __main__ - training datasets-3256070 has been loaded from disk
+04/28/2024 05:44:44 - INFO - __main__ - training datasets-3907284 has been loaded from disk
+04/28/2024 05:44:50 - INFO - __main__ - training datasets-651214 has been loaded from disk
+04/28/2024 05:44:50 - INFO - datasets.arrow_dataset - Loading cached split indices for dataset at /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-970995a532be3549.arrow and /home/ubuntu/bangla-llama-fs/bangla-llama/data/processed_pretrain_data/0_512/train/cache-fb1028c0b481a6c0.arrow
+04/28/2024 05:45:00 - INFO - __main__ - Num train_samples  11991395
+04/28/2024 05:45:00 - INFO - __main__ - Training example:
+04/28/2024 05:45:00 - INFO - __main__ - দা পুলিশের সাথে 'বন্দুকযুদ্ধে' আওলাদ হোসেন মিঠুন (৩৫) নামে পুলিশের তালিকাভুক্ত এক সন্ত্রাসী নিহত হয়েছেন।</s><s> এ সময় তার চার সহযোগীকে পিস্তল ও গুলিসহ গ্রেপ্তার করেছে গোয়েন্দা পুলিশ (ডিবি)।</s><s> শুক্রবার দিবাগত ভোররাতে মাধবদী শহরের টাঁটাপাড়া মহল্লায় এ ঘটনা ঘটে।</s><s> নিহত আওলাদ হোসেন মিঠুন মাধবদী থানার টাঁটাপাড়া মহল্লার জাকির হোসেনের ছেলে।</s><s> জেলা গোয়েন্দা পুলিশের উপ-পরিদর্শক আবদুল গাফফার এ তথ্য নিশ্চিত করে রাইজিংবিডিকে জানান
+04/28/2024 05:45:00 - INFO - __main__ - Num eval_samples  12004
+04/28/2024 05:45:00 - INFO - __main__ - Evaluation example:
+04/28/2024 05:45:00 - INFO - __main__ - চালান দেওয়া হয়েছে।</s><s> ভোটারেরা ভোট কেন্দ্রে না যাওয়ার জন্য হুমকি দেওয়া হয়েছে।</s><s> তারা উভয়ে সুষ্ঠু নির্বাচনের জন্য নির্বাচন কমিশনকে অনুরোধ জানান।</s><s> অন্যদিকে, জাতীয় পার্টি (এরশাদ) প্রার্থী সোলায়মান আলম শেঠ এবং ইসলামী আন্দোলন বাংলাদেশ প্রার্থী আবদুল জব্বার গাজী সুষ্ঠু নির্বাচন নিয়ে আশঙ্কা প্রকাশ করলেও কোন দলের নেতাকর্মীদের বিরূদ্ধে সুনির্দিষ্ট অভিযোগ করেননি।</s><s> সুষ্ঠু নির্বাচন অনুষ্ঠান নিয়ে রিটার্নিং অ
+04/28/2024 05:47:30 - INFO - __main__ - Model vocab size: 32000
+04/28/2024 05:47:30 - INFO - __main__ - Tokenizer vocab size: 32000
+04/28/2024 05:47:30 - INFO - __main__ - Init new peft model
+04/28/2024 05:47:30 - INFO - __main__ - target_modules: ['q_proj', 'v_proj', 'k_proj', 'o_proj', 'gate_proj', 'down_proj', 'up_proj']
+04/28/2024 05:47:30 - INFO - __main__ - lora_rank: 64
+04/28/2024 05:48:46 - INFO - __main__ - model.modules_to_save: ['embed_tokens', 'lm_head']
