@@ -27,7 +27,7 @@ deepspeed_config_file="../../ds_zero2_no_offload.json"
 
 # Weights&Biases specific
 log_report_to="wandb"
-wandb_run_name="lora_pretraining_with_original_tokenizer_test_continue"
+wandb_run_name="lora_pretraining_with_original_tokenizer"
 
 torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --deepspeed ${deepspeed_config_file} \
@@ -45,7 +45,6 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --seed ${seed} \
     --fp16 \
     --num_train_epochs ${epochs} \
-    --max_steps 300 \
     --lr_scheduler_type cosine \
     --learning_rate ${lr} \
     --warmup_ratio 0.05 \
@@ -54,9 +53,9 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --logging_steps 10 \
     --save_strategy steps \
     --save_total_limit 2 \
-    --save_steps 50 \
+    --save_steps 100 \
     --evaluation_strategy steps \
-    --eval_steps 50 \
+    --eval_steps 100 \
     --metric_for_best_model 'eval_loss' \
     --load_best_model_at_end True \
     --gradient_accumulation_steps ${gradient_accumulation_steps} \
@@ -79,4 +78,3 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --use_flash_attention_2 ${use_flash_attention_2} \
     --report_to ${log_report_to} \
     --run_name ${wandb_run_name} \
-    --resume_from_checkpoint ${output_dir}/checkpoint-200
