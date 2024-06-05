@@ -6,42 +6,41 @@ lora_trainable="q_proj,v_proj,k_proj,o_proj,gate_proj,down_proj,up_proj"
 modules_to_save="embed_tokens,lm_head"
 lora_dropout=0.05
 
+pretrained_model="meherajj/bangla-llama2-7b-orig-llama-tokenizer"
+tokenizer_name_or_path=${pretrained_model}
+dataset_dir="../../data/raw_pretrain_data"
+data_cache="../../data/processed_pretrain_data"
+model_cache="../../models"
+output_dir="../../output"
+
 seed=123
 block_size=512
 torch_dtype="float16"
-batch_size=64
+per_device_train_batch_size=64
 epochs=1
-gradient_accumulation_steps=4
+gradient_accumulation_steps=8
 validation_split_percentage=0.001
 
 use_auth_token=True
 use_flash_attention_2=True
 
-pretrained_model="meta-llama/Llama-2-7b-hf"
-bangla_tokenizer_path="meta-llama/Llama-2-7b-hf"
-dataset_dir="../../data/raw_pretrain_data"
-data_cache="../../data/processed_pretrain_data"
-model_cache="../../models"
-output_dir="../../output"
-deepspeed_config_file="../../ds_zero2_no_offload.json"
-
 # Weights&Biases specific
 log_report_to="wandb"
-wandb_run_name="lora_pretraining_with_original_tokenizer"
+wandb_run_name="bangla-llama2-7b-finetune-on-BanglaNMT-dataset"
 
 torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
-    --deepspeed ${deepspeed_config_file} \
     --model_name_or_path ${pretrained_model} \
-    --tokenizer_name_or_path ${bangla_tokenizer_path} \
+    --tokenizer_name_or_path ${tokenizer_name_or_path} \
     --use_auth_token ${use_auth_token} \
     --dataset_dir ${dataset_dir} \
     --data_cache_dir ${data_cache} \
     --cache_dir ${model_cache} \
     --validation_split_percentage ${validation_split_percentage} \
-    --per_device_train_batch_size ${batch_size} \
-    --per_device_eval_batch_size ${batch_size} \
+    --per_device_train_batch_size ${per_device_train_batch_size} \
+    --per_device_eval_batch_size ${per_device_train_batch_size} \
     --do_train \
     --do_eval \
+    --low_cpu_mem_usage \
     --seed ${seed} \
     --fp16 \
     --num_train_epochs ${epochs} \
@@ -72,8 +71,6 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --modules_to_save ${modules_to_save} \
     --torch_dtype ${torch_dtype} \
     --load_in_kbits 16 \
-    --save_safetensors False \
-    --gradient_checkpointing \
     --ddp_find_unused_parameters False \
     --use_flash_attention_2 ${use_flash_attention_2} \
     --report_to ${log_report_to} \
