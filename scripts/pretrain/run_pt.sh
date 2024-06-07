@@ -75,3 +75,7 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_with_peft.py \
     --use_flash_attention_2 ${use_flash_attention_2} \
     --report_to ${log_report_to} \
     --run_name ${wandb_run_name} \
+<<<<<<< Updated upstream
+=======
+    # --resume_from_checkpoint ${output_dir}/checkpoint-300
+>>>>>>> Stashed changes

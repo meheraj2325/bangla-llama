@@ -41,14 +41,14 @@ from transformers import (
 from huggingface_hub import HfApi, upload_folder, create_branch
 
 device_map = "auto" #{"": int(os.environ.get("LOCAL_RANK") or 0)}
-torch_dtype=torch.bfloat16
+torch_dtype=torch.float16
 
 base_model_name="meta-llama/Llama-2-7b-hf"
-bangla_tokenizer_path="../../tokenizer"
+bangla_tokenizer_path="meta-llama/Llama-2-7b-hf"
 
 output_dir="../../output"
-checkpoint=25700
-model_to_push = f"{output_dir}/checkpoint-{checkpoint}"
+checkpoint=10500
+model_to_push = f"{output_dir}/checkpoint-{checkpoint}/pt_lora_model/pt_lora_model"
 
 base_model = AutoModelForCausalLM.from_pretrained(
     base_model_name,
@@ -64,22 +64,22 @@ tokenizer = AutoTokenizer.from_pretrained(bangla_tokenizer_path, trust_remote_co
 print(f"base_model vocab size: {base_model.get_input_embeddings().weight.size(0)}")
 print(f"tokenizer vocab size: {len(tokenizer)}")
 
-model_vocab_size = base_model.get_input_embeddings().weight.size(0)
-assert len(tokenizer) >= model_vocab_size, \
-(f"The vocab size of the tokenizer {len(tokenizer)} is smaller than the vocab size of the base model {model_vocab_size}\n"
-"This is not the intended use. Please check your model and tokenizer.")
-if model_vocab_size != len(tokenizer):
-    base_model.resize_token_embeddings(len(tokenizer))
-    print(f"Extended vocabulary size to {len(tokenizer)}")
+# model_vocab_size = base_model.get_input_embeddings().weight.size(0)
+# assert len(tokenizer) >= model_vocab_size, \
+# (f"The vocab size of the tokenizer {len(tokenizer)} is smaller than the vocab size of the base model {model_vocab_size}\n"
+# "This is not the intended use. Please check your model and tokenizer.")
+# if model_vocab_size != len(tokenizer):
+#     base_model.resize_token_embeddings(len(tokenizer))
+#     print(f"Extended vocabulary size to {len(tokenizer)}")
 
 
 model = PeftModel.from_pretrained(base_model, model_to_push)
-# model = model.merge_and_unload()
+model = model.merge_and_unload()
 
-hf_model_repo_dir = "meherajj/bangla-llama-2-7b-lora-ckpt-25700"
+# hf_model_repo_dir = "meherajj/bangla-llama2-7b-orig-llama-tokenizer"
 
-model.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
-tokenizer.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
+# model.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
+# tokenizer.push_to_hub(hf_model_repo_dir, use_temp_dir=True, private=True)
 
 # # Initialize the HfApi class
 # api = HfApi()
