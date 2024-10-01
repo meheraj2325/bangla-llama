@@ -1,1 +1,3 @@
-# bangla-llama
+# Bangla-llama
+
+This repository contains the code and models for <b>Bangla-Llama</b>," a project aimed at enhancing the performance of language models for the Bangla language. It builds upon the open-source LLaMA model using the LoRA methodology for efficient training. Many of the scripts are adapted from the <a href="https://github.com/abhinand5/tamil-llama"> tamil-llama </a> repository, with additional inspiration from the <a href="https://github.com/ymcui/Chinese-LLaMA-Alpaca-2/tree/main">Chinese-LLaMA-Alpaca-2 </a> repository. Necessary modifications have been made to tailor the training process for Bangla-Llama on a large Bangla corpus of approximately 12 GB, sourced from the Bangla 2B+ BERT dataset, one of the largest datasets available for the Bangla language.
